@@ -25,17 +25,10 @@ public class Conexion {
 
     public void conectar() throws SQLException {
         try {
-<<<<<<< HEAD
             Class.forName("com.mysql.cj.jdbc.Driver");
             this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sena",login,clave);
             this.conectado=true;
-=======
-            // obtener el driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sena", login, clave);
-            this.conectado = true;
             System.out.println("conectado");
->>>>>>> f459424982c4ece7731a706f741e9b07d3f35f8c
         } catch (ClassNotFoundException e) {
             this.conectado = false;
             e.printStackTrace();
