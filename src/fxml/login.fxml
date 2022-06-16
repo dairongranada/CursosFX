@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginFX">
+   <children>
+      <Pane layoutY="574.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
+         <children>
+            <Text fill="WHITE" layoutX="365.0" layoutY="17.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy-Adsi  Copyright © 2022 derechos reservados" textAlignment="JUSTIFY" wrappingWidth="321.744140625">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="356.0" layoutY="79.0" prefHeight="468.0" prefWidth="345.0" style="-fx-background-color: #fff;">
+         <children>
+            <TextField fx:id="loginUser" layoutX="48.0" layoutY="177.0" prefHeight="34.0" prefWidth="256.0" promptText="Nombre Usuario" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="loginSingUp" layoutX="48.0" layoutY="326.0" mnemonicParsing="false" onAction="#ingresarBtn" prefHeight="42.0" prefWidth="256.0" style="-fx-background-color: #ee5700; -fx-border-radius: 100;" text="E N T R A R" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="loginMensage" layoutX="48.0" layoutY="268.0" prefHeight="52.0" prefWidth="256.0" textFill="#868686">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginMensage1" layoutX="84.0" layoutY="403.0" prefHeight="27.0" prefWidth="180.0" text="Olvitaste Tu Contraseña?" underline="true" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <PasswordField fx:id="loginPassword" layoutX="48.0" layoutY="234.0" prefHeight="34.0" prefWidth="256.0" promptText="Contraseña" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </PasswordField>
+            <Text layoutX="92.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INICIO DE SESION" textAlignment="CENTER" wrappingWidth="180.0">
+               <font>
+                  <Font name="Impact" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="54.0" prefWidth="999.0" style="-fx-background-color: #232323;">
+         <children>
+            <Button fx:id="homeL" layoutX="831.0" layoutY="9.0" mnemonicParsing="false" onAction="#openHomeL" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff; -fx-border-width: 0px 0px 2px 0px;" text="H O M E" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>
