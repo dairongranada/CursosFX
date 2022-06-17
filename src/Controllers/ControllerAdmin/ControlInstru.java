@@ -1,4 +1,4 @@
-package ControllerAdmin;
+package Controllers.ControllerAdmin;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +34,7 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) home.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/home.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/admin/home.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
@@ -48,7 +48,7 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) cursos.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/cursos.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/admin/cursos.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
@@ -62,7 +62,7 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) estudiantes.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/estudiantes.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/admin/estudiantes.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
@@ -77,7 +77,7 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) instructores.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/instructores.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/admin/instructores.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);

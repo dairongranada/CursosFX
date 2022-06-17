@@ -97,7 +97,7 @@ public class ControlEstudiantes {
                 resultset = stm.executeQuery(script);
                 if(resultset.next()){
                     contador_for =resultset.getInt("id personas");
-                    person info = new person(1,txtIdentifi.getText(),txtName.getText(),txtApellido.getText(),txtedad.getText(),null);
+                    person info = new person(2,txtIdentifi.getText(),txtName.getText(),txtApellido.getText(),txtedad.getText(),null);
                     if(contador_for == 0){
                         this.script = "INSERT INTO personas(identificacion,nombre,apellido,edad,tipo,email)"+
                         "VALUES ('"+info.getIdentificacion()+"','"+info.getNombre()+"','"+info.getApellidos()+"','"+info.getEdad()+"',"+info.getTipo()+",'"+info.getEmail()+"')";
