@@ -55,7 +55,7 @@
             </Text>
          </children>
       </Pane>
-      <Button fx:id="limpiar" layoutX="565.0" layoutY="317.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="Limpiar" textFill="WHITE">
+      <Button fx:id="limpiar" layoutX="565.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#limpiarCurses" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="Limpiar" textFill="WHITE">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
@@ -63,7 +63,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnCrear" layoutX="295.0" layoutY="317.0" mnemonicParsing="false" onAction="#crearCurso" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="Crear" textFill="WHITE">
+      <Button fx:id="btnCrear" layoutX="295.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#crearCurso" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="Crear" textFill="WHITE">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
