@@ -13,7 +13,7 @@
    <children>
       <Accordion layoutX="148.0" layoutY="72.0" />
       <Accordion layoutX="148.0" layoutY="143.0" />
-      <ImageView fitHeight="618.0" fitWidth="999.0" layoutX="-7.0" layoutY="-18.0" opacity="0.41" pickOnBounds="true" smooth="false">
+      <ImageView fitHeight="618.0" fitWidth="999.0" layoutY="-18.0" opacity="0.41" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../../jpg/pexels-pixabay-531321.jpg" />
          </image>
@@ -35,7 +35,7 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="228.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="usuario">
+            <Text fill="WHITE" layoutX="223.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="usuario">
                <font>
                   <Font size="15.0" />
                </font>
@@ -50,7 +50,7 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Button layoutX="95.0" layoutY="352.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="E D I T A R" textFill="WHITE">
+            <Button layoutX="67.0" layoutY="352.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="E D I T A R" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
