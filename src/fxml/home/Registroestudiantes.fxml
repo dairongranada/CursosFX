@@ -3,11 +3,13 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControlAll.ControlEstudiantes">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControlAll.ControlEstudiantes">
    <children>
       <Pane layoutX="1.0" layoutY="576.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
          <children>
@@ -18,7 +20,7 @@
             </Text>
          </children>
       </Pane>
-      <TextField fx:id="textfieldRespuesta" alignment="CENTER" editable="false" layoutX="36.0" layoutY="431.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.6" prefHeight="126.0" prefWidth="908.0" style="-fx-background-color: #161616;">
+      <TextField fx:id="textfieldRespuesta" alignment="CENTER" editable="false" layoutX="36.0" layoutY="431.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.6" prefHeight="126.0" prefWidth="585.0" style="-fx-background-color: #161616;">
          <font>
             <Font size="15.0" />
          </font>
@@ -26,27 +28,27 @@
             <Cursor fx:constant="DISAPPEAR" />
          </cursor>
       </TextField>
-      <TextField fx:id="txtIdentifi" layoutX="95.0" layoutY="196.0" prefHeight="44.0" prefWidth="257.0" promptText="Identificacion" style="-fx-background-color: #fff; -fx-border-color: #fff; -fx-border-width: 0px 0px 2px 0px;" styleClass="Inputs" stylesheets="@../css/css.css">
+      <TextField fx:id="txtIdentifi" layoutX="61.0" layoutY="198.0" prefHeight="44.0" prefWidth="257.0" promptText="Identificacion" style="-fx-background-color: #fff; -fx-border-color: #fff; -fx-border-width: 0px 0px 2px 0px;" styleClass="Inputs" stylesheets="@../css/css.css">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtName" layoutX="392.0" layoutY="197.0" prefHeight="44.0" prefWidth="257.0" promptText="Nombre" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;">
+      <TextField fx:id="txtName" layoutX="358.0" layoutY="199.0" prefHeight="44.0" prefWidth="257.0" promptText="Nombre" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtApellido" layoutX="687.0" layoutY="197.0" prefHeight="44.0" prefWidth="257.0" promptText="Apellido">
+      <TextField fx:id="txtApellido" layoutX="358.0" layoutY="276.0" prefHeight="44.0" prefWidth="257.0" promptText="Apellido">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtApellido1" layoutX="95.0" layoutY="274.0" prefHeight="44.0" prefWidth="257.0" promptText="Edad">
+      <TextField fx:id="txtedad" layoutX="61.0" layoutY="276.0" prefHeight="44.0" prefWidth="257.0" promptText="Edad">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="btnregister" layoutX="437.0" layoutY="370.0" mnemonicParsing="false" onAction="#clickRegister" prefHeight="37.0" prefWidth="234.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="REGISTRARSE" textFill="WHITE">
+      <Button fx:id="btnregister" layoutX="212.0" layoutY="370.0" mnemonicParsing="false" onAction="#clickRegister" prefHeight="37.0" prefWidth="234.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="REGISTRARSE" textFill="WHITE">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
@@ -54,27 +56,27 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Text fill="WHITE" layoutX="95.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificacion">
+      <Text fill="WHITE" layoutX="61.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificacion">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="95.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad">
+      <Text fill="WHITE" layoutX="61.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="392.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+      <Text fill="WHITE" layoutX="358.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="688.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" wrappingWidth="77.830078125">
+      <Text fill="WHITE" layoutX="358.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" wrappingWidth="77.830078125">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#ee5700" layoutX="285.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E S T U D I A N T E S" textAlignment="CENTER">
+      <Text fill="#ee5700" layoutX="150.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E S T U D I A N T E S" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="58.0" />
          </font>
@@ -99,5 +101,10 @@
             </Button>
          </children>
       </Pane>
+      <ImageView fitHeight="483.0" fitWidth="332.0" layoutX="651.0" layoutY="74.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../jpg/pexels-pavel-danilyuk-5496463.jpg" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -12,16 +14,17 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginFX">
    <children>
-      <Pane layoutY="574.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
-         <children>
-            <Text fill="WHITE" layoutX="365.0" layoutY="17.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy-Adsi  Copyright © 2022 derechos reservados" textAlignment="JUSTIFY" wrappingWidth="321.744140625">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Text>
-         </children>
-      </Pane>
-      <AnchorPane layoutX="356.0" layoutY="79.0" prefHeight="468.0" prefWidth="345.0" style="-fx-background-color: #fff;">
+      <ImageView fitHeight="682.0" fitWidth="417.0" layoutX="2.0" layoutY="-1.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../jpg/pexels-nemuel-sereti-6424589.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="664.0" fitWidth="459.0" layoutX="587.0" layoutY="-61.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../jpg/pexels-gagareen-7107487.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="327.0" layoutY="78.0" prefHeight="468.0" prefWidth="345.0" style="-fx-background-color: #fff;">
          <children>
             <TextField fx:id="loginUser" layoutX="48.0" layoutY="177.0" prefHeight="34.0" prefWidth="256.0" promptText="Nombre Usuario" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-width: 0px 0px 2px 0px;">
                <font>
@@ -61,6 +64,15 @@
             </Text>
          </children>
       </AnchorPane>
+      <Pane layoutY="574.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
+         <children>
+            <Text fill="WHITE" layoutX="339.0" layoutY="17.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy-Adsi  Copyright © 2022 derechos reservados" textAlignment="JUSTIFY" wrappingWidth="321.744140625">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
       <Pane prefHeight="54.0" prefWidth="999.0" style="-fx-background-color: #232323;">
          <children>
             <Button fx:id="homeL" layoutX="831.0" layoutY="9.0" mnemonicParsing="false" onAction="#openHomeL" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff; -fx-border-width: 0px 0px 2px 0px;" text="H O M E" textFill="WHITE">

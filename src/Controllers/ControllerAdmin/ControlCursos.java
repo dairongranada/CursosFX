@@ -48,7 +48,7 @@ public class ControlCursos{
         }else{
                 String cadena = instructor;
                 String [] fragmentos = cadena.split(" ");
-                System.out.println("=======" + fragmentos[0]);
+                System.out.println("======= " + fragmentos[0]);
                 String query1 = "INSERT INTO cursos(nombre,instructor)values('"+nameCurso+"','"+fragmentos[0] +"')";
                 con.conectar();
                 try (Statement stm = con.getCon().createStatement()){

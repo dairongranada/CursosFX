@@ -75,7 +75,7 @@ public class LoginFX{
                 if(rste.next()){
                     Stage stage = (Stage) loginSingUp.getScene().getWindow();
                     stage.close();
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/admin/instructores.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Instruct/homeInstructores.fxml"));
                     Parent root = loader.load();
                     Scene scene = new Scene(root);
                     stage = new Stage();

@@ -38,7 +38,7 @@ public class ControlH {
         try {
             Stage stage = (Stage) registerStudent.getScene().getWindow();
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/student/Registroestudiantes.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/home/Registroestudiantes.fxml"))).load();
             Scene scene = new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);

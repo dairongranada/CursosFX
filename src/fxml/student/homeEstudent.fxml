@@ -13,48 +13,44 @@
    <children>
       <Accordion layoutX="148.0" layoutY="72.0" />
       <Accordion layoutX="148.0" layoutY="143.0" />
-      <Pane layoutY="574.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
+      <ImageView fitHeight="618.0" fitWidth="999.0" layoutX="-7.0" layoutY="-18.0" opacity="0.41" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../jpg/pexels-pixabay-531321.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="245.0" layoutY="84.0" prefHeight="433.0" prefWidth="495.0" style="-fx-background-color: #101010;">
          <children>
-            <Text fill="WHITE" layoutX="366.0" layoutY="17.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy-Adsi  Copyright © 2022 derechos reservados" textAlignment="JUSTIFY" wrappingWidth="321.744140625">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Text>
-         </children>
-      </Pane>
-      <Pane layoutX="217.0" layoutY="91.0" prefHeight="461.0" prefWidth="565.0" style="-fx-background-color: #101010;">
-         <children>
-            <Text fill="WHITE" layoutX="138.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="usuario">
+            <Text fill="WHITE" layoutX="113.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="usuario">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="361.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="********">
+            <Text fill="WHITE" layoutX="336.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="********">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text fill="#838282" layoutX="134.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE ">
+            <Text fill="#838282" layoutX="109.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE ">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="253.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="usuario">
+            <Text fill="WHITE" layoutX="228.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="usuario">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
-            <Text fill="#838282" layoutX="242.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APELLIDO" wrappingWidth="70.0546875">
+            <Text fill="#838282" layoutX="217.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APELLIDO" wrappingWidth="70.0546875">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Text fill="#838282" layoutX="345.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRASEÑA" wrappingWidth="100.3193359375">
+            <Text fill="#838282" layoutX="320.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRASEÑA" wrappingWidth="100.3193359375">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Button layoutX="120.0" layoutY="357.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="E D I T A R" textFill="WHITE">
+            <Button layoutX="95.0" layoutY="352.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="E D I T A R" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -62,7 +58,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button fx:id="btnCSesion" layoutX="320.0" layoutY="357.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: red;" text="C E R R A   S E S I O N" textFill="WHITE">
+            <Button fx:id="btnCSesion" layoutX="295.0" layoutY="352.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: red;" text="C E R R A   S E S I O N" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -70,7 +66,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="202.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="177.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../jpg/avatar-user-student-3e3e52aa56aeb627-512x512.png" />
                </image>
@@ -105,6 +101,15 @@
                   <Font size="13.0" />
                </font>
             </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="574.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
+         <children>
+            <Text fill="WHITE" layoutX="366.0" layoutY="17.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy-Adsi  Copyright © 2022 derechos reservados" textAlignment="JUSTIFY" wrappingWidth="321.744140625">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
    </children>
