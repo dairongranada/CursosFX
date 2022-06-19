@@ -12,6 +12,8 @@ CREATE TABLE personas (
   email VARCHAR(100) NULL
 );
 
+ALTER TABLE personas ADD estado CHAR(1) DEFAULT 'A';
+
 CREATE TABLE tipo (
   idtipo int not null PRIMARY KEY AUTO_INCREMENT,
   Descripcion char(20) NULL
