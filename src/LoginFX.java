@@ -1,5 +1,6 @@
+import clases.classperson.*;
+
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -24,20 +25,19 @@ public class LoginFX{
     
 
     Connection con = null;
-    PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
 
 	@FXML void ingresarBtn(ActionEvent event) throws SQLException{
         // OBTENCION DE VALORES DE LOS INPUTS
-		String nombreUsuario = loginUser.getText();
-        String contraseña = loginPassword.getText();
-
+        person info = new person();
+        info.setNombre(loginUser.getText());
+        info.setIdentificacion(loginPassword.getText());
         Conexion conect = new Conexion();
         conect.conectar();
 
     // ACA SIRVE LA VALIDACION PARA EL ADMIN 
         if(conect.isConectado()){
-            String query = "SELECT id from personas where nombre = '"+nombreUsuario+"' AND identificacion = '"+contraseña+"' AND tipo = '"+3+"' ";
+            String query = "SELECT id from personas where nombre = '"+info.getNombre()+"' AND identificacion = '"+info.getIdentificacion()+"' AND tipo = 3 ";
             try (Statement stmA = conect.getCon().createStatement()){
                 ResultSet rst = stmA.executeQuery(query);
                 if(rst.next()){
@@ -50,9 +50,9 @@ public class LoginFX{
                     stage.setScene(scene);
                     stage.show();
                     conect.desconectar();
-     // ACA SIRVE LA VALIDACION PARA EL INSTRUCTOR 
+     // ACA SIRVE LA VALIDACION DE ESTUDIANTE
         }if(conect.isConectado()){
-            String queryInstructores = "SELECT id from personas where nombre = '"+ nombreUsuario+"' AND identificacion = '"+ contraseña+"' AND tipo = '"+2+"' ";
+            String queryInstructores = "SELECT id from personas where nombre = '"+ info.getNombre()+"' AND identificacion = '"+ info.getIdentificacion()+"' AND tipo = 2 ";
             try (Statement stmE = conect.getCon().createStatement()){
                 ResultSet rste = stmE.executeQuery(queryInstructores);
                 if(rste.next()){
@@ -69,7 +69,7 @@ public class LoginFX{
             }
     // ACA SIRVE LA VALIDACION PARA EL INSTRUCTOR 
         }if (conect.isConectado()){
-            String queryEstudiantes = "SELECT id from personas where email = '"+nombreUsuario+"' AND identificacion = '"+contraseña+"' AND tipo = '"+1+"' ";
+            String queryEstudiantes = "SELECT id from personas where email = '"+info.getNombre()+"' AND identificacion = '"+info.getIdentificacion()+"' AND tipo = 1 ";
             try (Statement stmE = conect.getCon().createStatement()){
                 ResultSet rste = stmE.executeQuery(queryEstudiantes);
                 if(rste.next()){
@@ -84,7 +84,7 @@ public class LoginFX{
                     conect.desconectar();
                 }
             }
-        }if(nombreUsuario == null || nombreUsuario.isEmpty() ||contraseña == null || contraseña.isEmpty()){
+        }if(info.getNombre() == null || info.getNombre().isEmpty() ||info.getIdentificacion() == null || info.getIdentificacion().isEmpty()){
             loginMensage.setText("Usuario o Contraseña Invaldilos");}
             } catch (Exception e) {
                 e.printStackTrace();

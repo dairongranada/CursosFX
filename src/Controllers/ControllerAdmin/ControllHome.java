@@ -38,7 +38,7 @@ public class ControllHome {
             Stage stage = (Stage) hoEstudiantes.getScene().getWindow(); 
             stage.close(); //CERRAR LA PESTAÑA DE HOME
 
-            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/admin/cursos.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../../fxml/admin/estudiantes.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
