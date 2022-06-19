@@ -46,8 +46,6 @@ public class ControlEstudiantes {
     private String script;
     private int rst,contador_for;
     ResultSet resultset;
-    Connection con = null;
-    PreparedStatement preparedStatement = null;
     Conexion connect = new Conexion();
 
     @FXML
