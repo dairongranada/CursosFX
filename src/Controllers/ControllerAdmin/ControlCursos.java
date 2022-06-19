@@ -39,7 +39,6 @@ public class ControlCursos{
 
     @FXML
     void crearCurso(MouseEvent event) throws SQLException {
-        
         String horario = cmbHorario.getValue();
         String instructor = cmbInstructor.getValue();
         String nameCurso = txtName.getText();

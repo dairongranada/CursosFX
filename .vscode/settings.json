@@ -1,14 +1,19 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\javaFX\\lib\\javafx.base.jar",
-        "c:\\javaFX\\lib\\javafx.controls.jar",
-        "c:\\javaFX\\lib\\javafx.fxml.jar",
-        "c:\\javaFX\\lib\\javafx.graphics.jar",
-        "c:\\javaFX\\lib\\javafx.media.jar",
-        "c:\\javaFX\\lib\\javafx.swing.jar",
-        "c:\\javaFX\\lib\\javafx.web.jar",
-        "c:\\javaFX\\lib\\javafx-swt.jar",
-        "c:\\mysql-connector-java-8.0.29\\mysql-connector-java-8.0.29.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\JavaFX\\lib\\javafx.base.jar",
+            "c:\\JavaFX\\lib\\javafx.controls.jar",
+            "c:\\JavaFX\\lib\\javafx.fxml.jar",
+            "c:\\JavaFX\\lib\\javafx.graphics.jar",
+            "c:\\JavaFX\\lib\\javafx.media.jar",
+            "c:\\JavaFX\\lib\\javafx.swing.jar",
+            "c:\\JavaFX\\lib\\javafx.web.jar",
+            "c:\\JavaFX\\lib\\javafx-swt.jar",
+            "c:\\mysql-connector-java-8.0.29\\mysql-connector-java-8.0.29.jar"
+        ],
+        "exclude": [
+            "c:\\javaFX\\lib\\javafx-swt.jar"
+        ]
+    }
 }
