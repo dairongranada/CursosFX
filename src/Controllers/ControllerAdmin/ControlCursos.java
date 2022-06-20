@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -22,38 +21,56 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class ControlCursos{    
+
+    Conexion conect = new Conexion();
     Conexion con = new Conexion();
 
-    PreparedStatement preparedStatement = null;
-    ResultSet resultSet = null;
-    String dato, query , query2;
-    
-    Conexion conect = new Conexion();
+    PreparedStatement preparedStatement;
+    ResultSet countResult;
+    private int amount;
 
 
-    @FXML private ComboBox<String> cmbHorario;
+
     @FXML private ComboBox<String> cmbInstructor;
+    @FXML private TextField txtFecha;
+    @FXML private TextField txtHora;
     @FXML private TextField txtName;
     @FXML private Button btnCrear;
+    private String script;
 
 
     @FXML
     void crearCurso(MouseEvent event) throws SQLException {
-        String horario = cmbHorario.getValue();
         String instructor = cmbInstructor.getValue();
         String nameCurso = txtName.getText();
-        if (horario == null || horario.isEmpty() || instructor == null || instructor.isEmpty() || nameCurso == null || nameCurso.isEmpty() ) {
+        String fecha = txtFecha.getText();
+        String hora = txtHora.getText();
+
+
+
+        if (fecha == null || fecha.isEmpty() || hora == null || hora.isEmpty() || instructor == null || instructor.isEmpty() || nameCurso == null || nameCurso.isEmpty() ) {
             Alert alert = new Alert(Alert.AlertType.ERROR);alert.setHeaderText(null);alert.setTitle("Error");
             alert.setContentText("Tienes Campos sin llenar"); alert.showAndWait();
         }else{
                 String cadena = instructor;
                 String [] fragmentos = cadena.split(" ");
-                System.out.println("======= " + fragmentos[0]);
-                String query1 = "INSERT INTO cursos(nombre,instructor)values('"+nameCurso+"','"+fragmentos[0] +"')";
+                System.out.println("id Instructor: " + fragmentos[0]);
+
                 con.conectar();
                 try (Statement stm = con.getCon().createStatement()){
+                    this.script = "SELECT COUNT(codigo) as 'amount' FROM cursos;";
+                    countResult = stm.executeQuery(script);
+                    if(countResult.next()){
+                        amount = countResult.getInt("amount");
+                        System.out.println("ID CURSOS: " + amount);
+                    }
+
+                    String query1 = "INSERT INTO cursos(codigo,nombre,instructor)values('"+(amount+1) +"', '"+nameCurso+"','"+ fragmentos[0] +"')";
+                    String query2 = "INSERT INTO horarios(curso,fecha,hora)values('"+(amount+1) +"','"+ fecha +"', '"+hora +"')";
                     int rest = stm.executeUpdate(query1);
-                    if(rest != 0){
+                    int rest2 = stm.executeUpdate(query2);
+
+                    if(rest != 0  || rest2 != 0 ){
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setHeaderText(null);alert.setTitle("Error");
                         alert.setContentText("Datos Registrados con exito"); alert.showAndWait();
@@ -73,36 +90,26 @@ public class ControlCursos{
 
     @FXML void initialize() throws IOException, SQLException{
         conect.conectar();
-        ResultSet consult,consult2;
-        query = "SELECT id,nombre,apellido FROM personas where tipo = 1;";
+        ResultSet consult;
+        String query = "SELECT id,nombre,apellido FROM personas where tipo = 1;";
         try (Statement stm = conect.getCon().createStatement()){
             consult = stm.executeQuery(query);
             while (consult.next()) {
-                dato = String.format("%d %s %s", consult.getInt("id"),  consult.getString("nombre"), consult.getString("apellido"));
+                String dato = String.format("%d %s %s", consult.getInt("id"),  consult.getString("nombre"), consult.getString("apellido"));
                 cmbInstructor.getItems().add(dato);
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-
-        query2 = "SELECT fecha,hora FROM horarios;";
-        try (Statement stm2 = conect.getCon().createStatement()){
-            consult2 = stm2.executeQuery(query2);                
-            System.out.println("Entre A la consulta");
-            while (consult2.next()) {
-                dato = String.format( "%s %s", consult2.getString("fecha"),consult2.getString("hora"));
-                cmbHorario.getItems().add(dato);
-            }
-        } catch (Exception e) {
-        }
-        
+        }    
     }
+
 
     @FXML
     void limpiarCurses(MouseEvent event) throws SQLException {
         System.out.println("BORRANDO...");
         txtName.clear();
-        cmbHorario.getItems().clear();
+        txtFecha.clear();
+        txtHora.clear();
         cmbInstructor.getItems().clear();
     }
 

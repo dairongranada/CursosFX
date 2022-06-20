@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class Conexion {
     private Connection con;
-    // private String login = "root";
-    // private String clave = "";
-    private String login = "sena";
-    private String clave = "12345";
+    private String login = "root";
+    private String clave = "";
+    // private String login = "sena";
+    // private String clave = "12345";
     private boolean conectado;
 
     public Connection getCon() {
