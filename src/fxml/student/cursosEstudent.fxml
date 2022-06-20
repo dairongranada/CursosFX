@@ -3,6 +3,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -12,7 +14,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerStudent.cursosStudent">
    <children>
       <Accordion layoutX="148.0" layoutY="72.0" />
-      <Accordion layoutX="148.0" layoutY="143.0" />
+      <Accordion layoutX="146.0" layoutY="127.0" />
       <Pane layoutY="574.0" prefHeight="26.0" prefWidth="999.0" style="-fx-background-color: #161616;">
          <children>
             <Text fill="WHITE" layoutX="366.0" layoutY="17.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="0.0" text="Energy-Adsi  Copyright © 2022 derechos reservados" textAlignment="JUSTIFY" wrappingWidth="321.744140625">
@@ -52,5 +54,55 @@
             </Button>
          </children>
       </Pane>
+      <Button fx:id="btnCrearC" layoutX="165.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#crearCurso" prefHeight="37.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="INSCRIBIRME A UN CURSO" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="textfieldRespuesta" alignment="CENTER" editable="false" layoutX="44.0" layoutY="424.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.6" prefHeight="126.0" prefWidth="529.0" style="-fx-background-color: #161616;">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtIdentifi" layoutX="54.0" layoutY="280.0" prefHeight="44.0" prefWidth="221.0" promptText="Ingresa Tu Identificacion" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="54.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificacion">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cbmCusosFechas" layoutX="318.0" layoutY="279.0" prefHeight="44.0" prefWidth="214.0" promptText="Cusos Disponibles" />
+      <Text fill="WHITE" layoutX="318.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cursos y Fechas">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#ee5700" layoutX="129.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATE A &#10;UN CURSO" textAlignment="CENTER" wrappingWidth="359.6484375">
+         <font>
+            <Font name="Impact" size="58.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="494.0" fitWidth="328.0" layoutX="641.0" layoutY="78.0" opacity="0.73" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../jpg/pexels-cottonbro-4709284.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="228.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="-79.7">
+         <image>
+            <Image url="@../../jpg/lupa.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
    </children>
 </Pane>
