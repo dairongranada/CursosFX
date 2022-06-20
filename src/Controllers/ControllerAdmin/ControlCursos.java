@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -25,7 +24,6 @@ public class ControlCursos{
     Conexion conect = new Conexion();
     Conexion con = new Conexion();
 
-    PreparedStatement preparedStatement;
     ResultSet countResult;
     private int amount;
 
