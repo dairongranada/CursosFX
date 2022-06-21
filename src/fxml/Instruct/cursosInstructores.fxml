@@ -3,13 +3,14 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerInstruc.cursosInstru">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerInstruc.cursosInstru">
    <children>
       <Accordion layoutX="148.0" layoutY="72.0" />
       <Accordion layoutX="148.0" layoutY="143.0" />
@@ -50,6 +51,111 @@
                   <Font size="15.0" />
                </font>
             </Text>
+         </children>
+      </Pane>
+      <Button fx:id="btnClear" layoutX="489.0" layoutY="434.0" mnemonicParsing="false" onAction="#clickClear" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="Limpiar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCrear" layoutX="36.0" layoutY="434.0" mnemonicParsing="false" onAction="#clickCrear" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="Crear" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="textfieldRespuesta" alignment="CENTER" editable="false" layoutX="57.0" layoutY="488.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.6" prefHeight="71.0" prefWidth="529.0" style="-fx-background-color: #161616;" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="80.0" layoutY="279.0" prefHeight="44.0" prefWidth="214.0" promptText="Ingresa El Nombre" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;" visible="false">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Text fx:id="nombrecurso" fill="WHITE" layoutX="75.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Curso" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="hora" fill="WHITE" layoutX="313.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="instructor" fill="WHITE" layoutX="313.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instructor" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#ee5700" layoutX="69.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO DE CURSOS" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="58.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtFecha" layoutX="80.0" layoutY="364.0" prefHeight="44.0" prefWidth="214.0" promptText="Ejem: Año-Mes-Dia" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;" visible="false">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtHora" layoutX="313.0" layoutY="364.0" prefHeight="44.0" prefWidth="214.0" promptText="Ejemp: 10:00" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;" visible="false">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Text fx:id="fecha" fill="WHITE" layoutX="80.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="494.0" fitWidth="328.0" layoutX="641.0" layoutY="78.0" opacity="0.73" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../jpg/pexels-cottonbro-4709284.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnDelete" layoutX="340.0" layoutY="434.0" mnemonicParsing="false" onAction="#clickDelete" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="eliminar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="187.0" layoutY="434.0" mnemonicParsing="false" onAction="#clickUpdate" prefHeight="37.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff;" text="actualizar" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtInstructor" layoutX="313.0" layoutY="279.0" prefHeight="44.0" prefWidth="214.0" style=": transpaent; -fx-border-width: 0px 0px 2px 0px;" visible="false">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="75.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="digite su identificacion">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtidentificacion" layoutX="75.0" layoutY="170.0" prefHeight="36.0" prefWidth="214.0" promptText="digite su numero de identificacion" />
+      <Pane layoutX="302.0" layoutY="170.0" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fx:id="imagelupa" fitHeight="27.0" fitWidth="29.0" layoutX="2.0" layoutY="3.0" onMouseClicked="#clickLupa">
+               <image>
+                  <Image url="@../../jpg/lupa.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

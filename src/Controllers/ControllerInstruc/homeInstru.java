@@ -13,14 +13,14 @@ public class homeInstru {
 
     @FXML private Button btnCSesion;
 
-    @FXML private Button verCursos;
-    @FXML private Button verPerfil;
+    @FXML private Button verCursos1;
+    @FXML private Button verPerfil1;
 
 
 
     @FXML void openVerCursos(ActionEvent event) throws SQLException{
         try {
-            Stage stage = (Stage) verCursos.getScene().getWindow(); 
+            Stage stage = (Stage) verCursos1.getScene().getWindow(); 
             stage.close(); 
 
             Parent root = (new FXMLLoader(getClass().getResource("../../fxml/Instruct/cursosInstructores.fxml"))).load();
@@ -36,7 +36,7 @@ public class homeInstru {
 
     @FXML void openVerPerfil(ActionEvent event) throws SQLException{
         try {
-            Stage stage = (Stage) verPerfil.getScene().getWindow(); 
+            Stage stage = (Stage) verPerfil1.getScene().getWindow(); 
             stage.close(); 
 
             Parent root = (new FXMLLoader(getClass().getResource("../../fxml/Instruct/homeInstructores.fxml"))).load();
