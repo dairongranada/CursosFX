@@ -24,6 +24,7 @@ public class cursosStudent {
     @FXML private Button btnCrearC;
 
     @FXML private TextField txtIdentifi;
+    @FXML private TextField textfieldRespuesta;
     @FXML private ComboBox<String> cbmCusosFechas;
 
     Conexion conect = new Conexion();
@@ -34,6 +35,7 @@ public class cursosStudent {
     ResultSet countResult;
     private int idEstudent;    
     private boolean success;
+    int validacion_insert;
 
 
 
@@ -57,26 +59,23 @@ public class cursosStudent {
                 success = true;
                 System.out.println("ID ESTUDIANTE: " + idEstudent);
             }else{
-                System.out.println(" ESE MKA NO EXISTE PAI");
+                System.out.println("error identificacion");
                 success = false;
             }
         }if (success == true) {
-                String cadena = cursos;
-                String [] fragmentos = cadena.split(" ");
-                System.out.println(fragmentos[0]);
-
                 try (Statement stm2 = con.getCon().createStatement()){
-                    String query1 = "INSERT INTO registro_cursos(alumno,curso)values('"+idEstudent+"','"+ fragmentos[0]+"')";
-                    int rest = stm2.executeUpdate(query1);
-                    if(rest != 0 ){
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setHeaderText(null);alert.setTitle("Error");
-                        alert.setContentText("Datos Registrados con exito"); alert.showAndWait();
-                    }
-                    else{
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setHeaderText(null);alert.setTitle("Error");
-                        alert.setContentText("Error al guardar los datos por favor verifique"); alert.showAndWait();
+                    this.script =  "SELECT codigo FROM cursos WHERE nombre = '"+cursos+"'";
+                    countResult = stm2.executeQuery(script);
+                    if(countResult.next()){
+                        this.script = "INSERT INTO registro_cursos(alumno,curso) VALUES ("+idEstudent+","+countResult.getInt("codigo")+")";
+                        validacion_insert = stm2.executeUpdate(script);
+                        if(validacion_insert != 0){
+                            textfieldRespuesta.setText("!su registroa este curso a sido exitoso¡");
+                            restaurardatos();
+                        }else{
+                            textfieldRespuesta.setText("error en su registro");
+                            restaurardatos();
+                        }
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -98,24 +97,19 @@ public class cursosStudent {
             String query = "SELECT c.codigo, c.nombre, h.fecha, h.hora from cursos c,horarios h WHERE c.codigo = h.curso;";
             consult = stm3.executeQuery(query);
             while (consult.next()) {
-                String dato = String.format("%d %s",consult.getInt("c.codigo") ,consult.getString("c.nombre"));
+                String dato = String.format("%s",consult.getString("c.nombre"));
                 cbmCusosFechas.getItems().add(dato);
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }    
+        }
+        conect.desconectar();    
     }
 
-
-
-
-
-
-
-
-
-
-
+    @FXML void restaurardatos(){
+        txtIdentifi.clear();
+        cbmCusosFechas.setValue("");
+    }
 
     @FXML void openVerCursos(ActionEvent event) throws SQLException{
         try {
