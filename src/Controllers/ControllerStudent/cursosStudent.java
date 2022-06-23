@@ -94,10 +94,10 @@ public class cursosStudent {
         conect.conectar();
         ResultSet consult;
         try (Statement stm3 = conect.getCon().createStatement()){
-            String query = "SELECT c.codigo, c.nombre, h.fecha, h.hora from cursos c,horarios h WHERE c.codigo = h.curso;";
+            String query = "SELECT nombre FROM cursos;";
             consult = stm3.executeQuery(query);
             while (consult.next()) {
-                String dato = String.format("%s",consult.getString("c.nombre"));
+                String dato = String.format("%s",consult.getString("nombre"));
                 cbmCusosFechas.getItems().add(dato);
             }
         } catch (Exception e) {
